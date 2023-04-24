@@ -1,0 +1,11 @@
+.array-item {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #eee;
+    cursor: pointer;
+}
+/*文字划掉样式*/
+.fontline-line-through {
+    text-decoration: line-through;
+}
