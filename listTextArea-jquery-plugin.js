@@ -1,13 +1,13 @@
 $(document).ready(function() {
     // var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"];
-    var honeybees = $('#array-container').data('honeybee');
+    var honeybees = $('.list-container').data('list');
     //将honeybees字符串，按照,切割为数组
     array = honeybees.split(',');
     var arrayHtml = "";
     for (var i = 0; i < array.length; i++) {
         arrayHtml += '<li class="array-item">' + array[i] + '</li>';
     }
-    $('#array-container').html(arrayHtml);
+    $('.list-container').html(arrayHtml);
 
     // 将选中的数组项添加到文本框中
     $('.array-item').on('click', function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
             return false;
         }
         var value = $(this).text();
-        var textInput = $('#text-input');
+        var textInput = $('.list-string');
         var currentVal = textInput.val();
 
         if (currentVal === "") {
@@ -31,7 +31,7 @@ $(document).ready(function() {
     });
 
 // 将文本框中的值添加回数组中
-    $('#text-input').click(function() {
+    $('.list-string').click(function() {
         var textInput = $(this);
         var text = textInput.val();
         var clickedIndex = event.target.selectionStart;
@@ -48,7 +48,7 @@ $(document).ready(function() {
         if(subStr === ""){
             return;
         }
-        var arrayContainer = $('#array-container');
+        var arrayContainer = $('.list-container');
         var items = arrayContainer.find('.array-item');
         var inserted = false;
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
         subStr += value.substring(endIndex);
 
         if (subStr !== "") {
-            var arrayContainer = $('#array-container');
+            var arrayContainer = $('.list-container');
             var items = arrayContainer.find('.array-item');
             var inserted = false;
 
