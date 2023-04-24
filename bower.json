@@ -1,0 +1,27 @@
+{
+  "name": "listTextArea-jquery-plugin",
+  "version": "1.0.0",
+  "main": "listTextArea-jquery-plugin.js",
+  "dependencies": {
+    "jquery": "~3.6.0"
+  },
+  "authors": [
+    "benjamin <jjdoor@163.com>"
+  ],
+  "description": "通过点击列表项将数据插入到文本框中，并支持在文本框中再次点击以将数据插入回列表中",
+  "keywords": [
+    "listTextArea",
+    "benjamin",
+    "yyfjj",
+    "列表"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
