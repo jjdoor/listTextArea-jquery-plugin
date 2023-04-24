@@ -146,5 +146,10 @@ $(document).ready(function() {
         textInput.val('');
     });
 
-
+//给jquery添加一个方法，用于清除fontline-line-through样式
+    $.fn.removeFontline = function() {
+        return $('.array-item').each(function() {
+            $(this).removeClass('fontline-line-through');
+        });
+    }
 });

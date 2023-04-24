@@ -19,6 +19,11 @@
 </div>
 <!--样式必须是list-string-->
 <textarea type="text" class="list-string" placeholder="点击上面优化器可以添加到此处，点击此处优化器可以删除已添加的。&#10;手动添加多个优化器，请用英文逗号分割。"></textarea>
+<script>
+    $(function () {
+        $('.commond-btn').removeFontline();
+    });
+</script>
 ```
 ### 通过bower安装
 ```shell
