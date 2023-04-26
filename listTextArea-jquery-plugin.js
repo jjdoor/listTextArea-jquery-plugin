@@ -128,7 +128,7 @@ $(function() {
         if ($(this).hasClass('fontline-line-through')) {
             return false;
         }
-        var value = $(this).text();
+        var value = data;
         var textInput = $('.list-string');
         var currentVal = textInput.val();
 
