@@ -9,19 +9,32 @@
 ```
 ### HTML
 ```html
-<!--样式必须是list-container，传输的数据写在data-list里-->
+<!--样式默认是list-container，如果页面多个实例，不可以相同，传输的数据写在data-list里-->
 <div class="list-container" data-list="12345678,23456789,34567890,45678901">
-    <!-- list数据会形成下面的列表 -->
+    <!-- list数据会形成下面的列表，样式模式人array-item，如果页面多个实例，不可以相同 -->
     <!-- <div class="array-item">12345678</div>-->
     <!-- <div class="array-item">23456789</div>-->
     <!-- <div class="array-item">34567890</div>-->
     <!-- <div class="array-item">45678901</div>-->
 </div>
-<!--样式必须是list-string-->
+<!--样式默认是list-string，如果页面多个实例，不可以相同-->
 <textarea type="text" class="list-string" placeholder="点击上面优化器可以添加到此处，点击此处优化器可以删除已添加的。&#10;手动添加多个优化器，请用英文逗号分割。"></textarea>
 <script>
+    // 清除删除线
     $(function () {
         $('.commond-btn').removeFontline();
+    });
+    // 使用插件，参数用默认参数
+    $(document).ready(function() {
+        $('.list-container').listBuilder();
+    });
+    //使用插件，参数自定义
+    $(document).ready(function() {
+        $('.list-container').listBuilder({
+            containerClass: 'list-container',
+            itemClass: 'array-item',
+            listClass: 'list-string',
+        });
     });
 </script>
 ```
